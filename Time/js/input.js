@@ -3,6 +3,8 @@ var time = {
     m:0,
     s: 0
 };
+var messageContainer = document.getElementById("message-container");
+var addContent = null;
 
 setInterval(function () { setTime(); },1000);
 function setTime() {
@@ -13,6 +15,11 @@ function setTime() {
         time.s++;
     }
     document.getElementById("clock").innerHTML=checkTime(time.m) + ":" + checkTime(time.s);
+	for (message in db) {
+		if (db[message].s == time.s && db[message].m == time.m) {
+			
+		}
+	}
 }
 
 function checkTime(i) {
@@ -29,6 +36,9 @@ function getValues() {
 	input.s = time.s;
 	db.push(input);
 	document.getElementById('form').reset();
+	/* addContent = document.createTextNode("<p>" + input.text + "</p>");
+	messageContainer.appendChild(addContent); */
+	$('#message-container').append('<p>'+ input.text + '</p>');
 	return false;
 }
 /* box.addEventListener( 'webkitTransitionEnd', 

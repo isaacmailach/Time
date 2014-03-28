@@ -16,6 +16,14 @@ html, body {
 	position: absolute;
 	top: 0;
 }
+#message-container {
+	font-size: 2rem;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	font-family: First Order
+}
 #clock-container {
     text-align: center;
     position: relative;
