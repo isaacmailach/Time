@@ -36,6 +36,15 @@ html, body {
     margin: 0;
     font-family: First Order;
 }
+#trees {
+	position:absolute;
+	bottom:9rem;
+	left:3rem;
+	height:40rem;
+}
+.tree {
+	height:100%;
+}
 #grass {
 	width: 100%;
 	position: absolute;
