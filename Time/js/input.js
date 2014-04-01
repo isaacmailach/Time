@@ -20,6 +20,7 @@ function setTime() {
 			
 		}
 	}
+	$('input').focus();
 }
 
 function checkTime(i) {
