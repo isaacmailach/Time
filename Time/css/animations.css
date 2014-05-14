@@ -1,12 +1,21 @@
 .bg {
-	transition: opacity 60s linear;
+	transition: opacity 6s linear;
 }
 .opac {
     opacity: 1;
+}
+.top {
+ 
+}  
+.abs {
+    position: absolute;
 }
 .disp {
     display: none;
 }
 .tree {
     transition: opacity 4s linear;
+}
+.message {
+	transition: all 2s linear;
 }
