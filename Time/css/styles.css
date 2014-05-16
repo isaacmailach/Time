@@ -61,7 +61,7 @@ html, body {
 	top: 0;
 	text-align: center;
 	width: 100%;
-	font-family: Arial, sans-serif;
+	font-family: NixieOneRegular, Arial, sans-serif;
 }
 .message {
 	opacity:0;
@@ -114,4 +114,6 @@ input {
 	text-align: center;
 	font-size: 2rem;
 	width: 100%;
+    font-family: NixieOneRegular, Arial, sans-serif;
+    font-weight: 1000;
 }

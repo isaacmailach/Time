@@ -52,7 +52,7 @@ function getValues() {
 	return false;
 }
 
-setInterval(function () { setTime(); }, 1000);
+// setInterval(function () { setTime(); }, 1000);
 /* box.addEventListener( 'webkitTransitionEnd', 
     function( event ) { alert( "Finished transition!" ); }, false ); */
 var i = 1;
