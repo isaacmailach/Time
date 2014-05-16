@@ -42,17 +42,18 @@ html, body {
 #bg3 {
 	width:300%;
 	left:-100%;
-    background: #230723;
-	background: -moz-radial-gradient(center, ellipse cover,  #230723 0%, #000733 37%, #000733 46%, #0a0c1e 70%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#230723), color-stop(37%,#000733), color-stop(46%,#000733), color-stop(70%,#0a0c1e));
-	background: -webkit-radial-gradient(center, ellipse cover,  #230723 0%,#000733 37%,#000733 46%,#0a0c1e 70%);
-	background: -o-radial-gradient(center, ellipse cover,  #230723 0%,#000733 37%,#000733 46%,#0a0c1e 70%);
-	background: -ms-radial-gradient(center, ellipse cover,  #230723 0%,#000733 37%,#000733 46%,#0a0c1e 70%);
-	background: radial-gradient(ellipse at center,  #230723 0%,#000733 37%,#000733 46%,#0a0c1e 70%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#230723', endColorstr='#0a0c1e',GradientType=1 );
+	background: #3d0c2b;
+	background: -moz-radial-gradient(center, ellipse cover,  #3d0c2b 4%, #1f0030 38%, #170030 51%, #0e0f2b 71%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(4%,#3d0c2b), color-stop(38%,#1f0030), color-stop(51%,#170030), color-stop(71%,#0e0f2b));
+	background: -webkit-radial-gradient(center, ellipse cover,  #3d0c2b 4%,#1f0030 38%,#170030 51%,#0e0f2b 71%);
+	background: -o-radial-gradient(center, ellipse cover,  #3d0c2b 4%,#1f0030 38%,#170030 51%,#0e0f2b 71%);
+	background: -ms-radial-gradient(center, ellipse cover,  #3d0c2b 4%,#1f0030 38%,#170030 51%,#0e0f2b 71%);
+	background: radial-gradient(ellipse at center,  #3d0c2b 4%,#1f0030 38%,#170030 51%,#0e0f2b 71%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d0c2b', endColorstr='#0e0f2b',GradientType=1 );
+
 }
 #stars {
-	height:100%;
+	width: 100%;
 }
 #message-container {
 	font-size: 2rem;
@@ -87,7 +88,7 @@ html, body {
 	height:40rem;
 }
 #grass {
-	width: 100%;
+    height: 200px;
 	position: absolute;
 	bottom: 9rem;
 	left: 0;

@@ -1,20 +1,33 @@
 var db = [];
+    db[0] = {text: "Welcome to Time", i: 2, id: 0};
+    db[1] = {text: "Feel free to enter in a short inspirational message or quote", i: 12, id: 1};
+    db[2] = {text: "Simply type the message and then push Enter", i: 22, id: 2};
+
+/*db[0].text = "Welcome to Time";
+db[0].i = 1;
+db[0].id = 0;
+db[1].text = "Feel free to enter in a short inspirational message or quote";
+db[1].i = 10;
+db[1].id = 1;
+db[2].text = "Simply type the message and then push Enter";
+db[2].i = 19;
+db[2].id = 2;*/
 var time = {
     m: 0,
     s: 0
 };
 var messageContainer = document.getElementById("message-container");
 var addContent = null;
-var counter = 0;
+var counter = 3;
 
-function checkTime(check) {
+/*function checkTime(check) {
     if (check < 10) {
         check = "0" + check;
     }
     return i;
-}
+}*/
 
-function setTime() {
+/*function setTime() {
     if (time.s === 59) {
         time.s = 0;
         time.m++;
@@ -22,7 +35,7 @@ function setTime() {
         time.s++;
     }
     document.getElementById("clock").innerHTML = checkTime(time.m) + ":" + checkTime(time.s);
-}
+}*/
 
 function getValues() {
     var input = {};
@@ -45,7 +58,7 @@ setInterval(function () { setTime(); }, 1000);
 var i = 1;
 
 function aniTimer() {
-    if (i == 240) {
+    if (i == 241) {
         i = 1;
     }
     
@@ -119,7 +132,13 @@ function aniTimer() {
     } else if (i == 234) {
         $('#tree1').removeClass('opac');
     }
-    
+    if (i > 0 && i < 30) {
+		$('#message-container').css({'color': 'white'});
+	} else if (i > 30 && i < 150) {
+		$('#message-container').css({'color': 'black'});
+	} else if (i > 150) {
+		$('#message-container').css({'color': 'white'});
+	}
     for (message in db) {
 		if (db[message].i === i) {
             //$('#' + db[message].id).css("height", $('#' + db[message].id).height());
@@ -132,6 +151,12 @@ function aniTimer() {
             $('#' + db[message].id).removeClass("disp");
         } else if (db[message].i + 9 === i) {
             $('#' + db[message].id).addClass("disp");
+        } else if (db[message].i + 9 > 240 && db[message].i + 9 - 240 === i) {
+            $('#' + db[message].id).addClass("disp");
+        } else if (db[message].i + 7 > 240 && db[message].i + 7 - 240 === i) {
+            $('#' + db[message].id).removeClass("opac");
+        } else if (db[message].i === 1 && 240 === i) {
+            $('#' + db[message].id).removeClass("disp");
         }
 	}
 	$('input').focus();
