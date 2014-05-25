@@ -1,17 +1,7 @@
 var db = [];
     db[0] = {text: "Welcome to Time", i: 2, id: 0};
-    db[1] = {text: "Feel free to enter in a short inspirational message or quote", i: 12, id: 1};
+    db[1] = {text: "Feel free to contribute advice or inspirational messages to the collective", i: 12, id: 1};
     db[2] = {text: "Simply type the message and then push Enter", i: 22, id: 2};
-
-/*db[0].text = "Welcome to Time";
-db[0].i = 1;
-db[0].id = 0;
-db[1].text = "Feel free to enter in a short inspirational message or quote";
-db[1].i = 10;
-db[1].id = 1;
-db[2].text = "Simply type the message and then push Enter";
-db[2].i = 19;
-db[2].id = 2;*/
 var time = {
     m: 0,
     s: 0
@@ -20,41 +10,30 @@ var messageContainer = document.getElementById("message-container");
 var addContent = null;
 var counter = 3;
 
-/*function checkTime(check) {
-    if (check < 10) {
-        check = "0" + check;
-    }
-    return i;
-}*/
-
-/*function setTime() {
-    if (time.s === 59) {
-        time.s = 0;
-        time.m++;
-    } else {
-        time.s++;
-    }
-    document.getElementById("clock").innerHTML = checkTime(time.m) + ":" + checkTime(time.s);
-}*/
-
 function getValues() {
-    var input = {};
-	input.text = document.getElementById('input').value;
-	input.i = i;
-	input.id = counter;
-	db.push(input);
-	document.getElementById('form').reset();
-	/* addContent = document.createTextNode("<p>" + input.text + "</p>");
-	messageContainer.appendChild(addContent); */
-	$('#message-container').append('<p class="message" id="' + input.id + '">' + input.text + '</p>');
-	
-	counter++;
+    if (document.getElementById('input').value === "mail_messages") {
+        var body = "";
+        for (var a = 3; a < db.length; a++) {
+            body += (a - 2) + '. ' + db[a].text + '\n';
+        }
+        window.open("mailto:dudeditto@gmail.com?subject=TimeContent&body=" + escape(body));
+        document.getElementById('form').reset();
+    } else {
+        var input = {};
+        input.text = document.getElementById('input').value;
+        input.i = i;
+        input.id = counter;
+        db.push(input);
+        document.getElementById('form').reset();
+        /* addContent = document.createTextNode("<p>" + input.text + "</p>");
+        messageContainer.appendChild(addContent); */
+        $('#message-container').append('<p class="message" id="' + input.id + '">' + input.text + '</p>');
+
+        counter++;
+    }
 	return false;
 }
 
-// setInterval(function () { setTime(); }, 1000);
-/* box.addEventListener( 'webkitTransitionEnd', 
-    function( event ) { alert( "Finished transition!" ); }, false ); */
 var i = 1;
 
 function aniTimer() {
