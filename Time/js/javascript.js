@@ -138,8 +138,12 @@ function aniTimer() {
             $('#' + db[message].id).removeClass("disp");
         }
 	}
+    if (i === 2) {
+        document.getElementById('music').play();
+        document.getElementById('wind').volume = 0.7;
+        document.getElementById('wind').play();
+    }
 	$('input').focus();
     i++;
 }
-
 setInterval(function() {aniTimer();},1000);
