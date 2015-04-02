@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Time</title>
+		
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<link href="css/animations.css" rel="stylesheet" type="text/css" />
+		<link href="css/font.css" rel="stylesheet" type="text/css" />
+		
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript"></script>
+		<script src="js/javascript.js" type="text/javascript"></script>
+	</head>
+	<body>
+	    <div id="content">
+            <img id="stars" src="img/stars-background.jpg" />
+    		<div id="bg1" class="bg"></div>
+    		<div id="bg2" class="bg"></div>
+    		<div id="bg3" class="bg"></div>
+			<div id="message-container">
+                <p class="message disp" id="0">Welcome to Time</p>
+                <p class="message disp" id="1">Feel free to contribute advice or inspirational messages to the collective</p>
+                <p class="message disp" id="2">Simply type the message and then push Enter</p>
+            </div>
+			<div id="trees">
+                <img id="tree1" class="tree" src="img/tree1.svg" draggable="false" />
+                <img id="tree2" class="tree" src="img/tree2.svg" draggable="false" />
+                <img id="tree3" class="tree" src="img/tree3.svg" draggable="false" />
+                <img id="tree4" class="tree" src="img/tree4.svg" draggable="false" />
+                <img id="tree5" class="tree" src="img/tree5.svg" draggable="false" />
+                <img id="tree6" class="tree" src="img/tree6.svg" draggable="false" />
+                <img id="tree7" class="tree" src="img/tree7.svg" draggable="false" />
+                <img id="tree8" class="tree" src="img/tree8.svg" draggable="false" />
+				<img id="tree9" class="tree" src="img/tree9.svg" draggable="false" />
+                <img id="tree10" class="tree" src="img/tree10.svg" draggable="false" />
+			</div>
+    		<img id="grass" src="img/grass.png" draggable="false" />
+    		<footer>
+    			<form id="form" onSubmit="return getValues();">
+    				<input id="input" type="text" maxlength="100" autocomplete="off" required="required" />
+    			</form>
+    		</footer>
+		</div>
+        <audio id="music">
+            <source src="audio/music.mp3" type="audio/mp3" />
+            <source src="audio/music.ogg" type="audio/ogg" />
+        </audio>
+        <audio id="wind" loop="true">
+            <source src="audio/wind.mp3" type="audio/mp3" />
+            <source src="audio/wind.ogg" type="audio/ogg" />
+        </audio>
+	</body>
+</html>

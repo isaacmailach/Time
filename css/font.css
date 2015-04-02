@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NixieOneRegular';
+    src: url('font/nixieone-regular.eot');
+    src: url('font/nixieone-regular.eot') format('embedded-opentype'),
+         url('font/nixieone-regular.woff') format('woff'),
+         url('font/nixieone-regular.ttf') format('truetype'),
+         url('font/nixieone-regular.svg#NixieOneRegular') format('svg');
+}
